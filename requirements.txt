@@ -8,7 +8,7 @@ tqdm
 rasterio
 scipy
 pyproj
-segmentation-models-pytorch
+segmentation-models-pytorch==0.6.0
 
 # PyTorch and torchvision are supplied by Google Colab.
 # For local installations, install compatible versions
