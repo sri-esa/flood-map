@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"H","role":"primary"},"geometry":{"type":"Polygon","coordinates":[[[88.4,21.75],[88.9,21.75],[88.9,22.25],[88.4,22.25],[88.4,21.75]]]}},
+{"type":"Feature","properties":{"name":"B","role":"candidate"},"geometry":{"type":"Polygon","coordinates":[[[88.6,21.7],[89.1,21.7],[89.1,22.2],[88.6,22.2],[88.6,21.7]]]}},
+{"type":"Feature","properties":{"name":"C","role":"candidate"},"geometry":{"type":"Polygon","coordinates":[[[88.3,21.8],[88.7,21.8],[88.7,22.3],[88.3,22.3],[88.3,21.8]]]}}
+]}
