@@ -1,5 +1,4 @@
-
-# Member A — Reproducibility Guide
+# Reproducibility Guide
 
 ## 1. Environment
 
@@ -13,11 +12,11 @@ The final model uses:
 - ResNet-34 encoder
 - ImageNet pretrained weights
 
-See `requirements.txt` for the Python dependencies.
+See the root-level `requirements.txt` for Python dependencies.
 
 ## 2. Dataset
 
-Dataset: Sen1Floods11 Hand-Labeled Dataset.
+**Dataset:** Sen1Floods11 Hand-Labeled Dataset.
 
 The dataset contains Sentinel-1 VV and VH SAR imagery with corresponding flood labels.
 
@@ -30,7 +29,7 @@ Dataset splits used:
 | Testing | 88 |
 | Total | 425 |
 
-Raw imagery and labels are not included in this GitHub directory.
+Raw imagery and labels are not included in this GitHub repository.
 
 The original workflow retrieves dataset files from the Sen1Floods11 Google Cloud Storage source.
 
@@ -76,34 +75,26 @@ Weighted tile blending was also used to reduce patch-boundary artefacts.
 | Water no longer predicted | 1.0939 km² |
 | Net predicted change | -0.9364 km² |
 
-These represent model-predicted changes and should not be interpreted as independently validated flood-area measurements.
+These values represent model-predicted changes and should not be interpreted as independently validated flood-area measurements.
 
-## 6. Google Drive Artifacts
+## 6. Data and Artifact Storage
 
-The shared Google Drive contains the final project artifacts.
+Large datasets, model checkpoints, GeoTIFF files, training logs and experimental outputs are maintained in the shared project Google Drive workspace.
 
-Location: `flood_mapping/Member_A/`
+These large artifacts are not committed directly to GitHub.
 
-| Folder | Contents |
-|---|---|
-| 01_Notebooks | Final Colab notebook |
-| 02_Model_Checkpoints | Best and latest model checkpoints |
-| 03_Training_Logs | Training history and normalization statistics |
-| 04_Test_Evaluation | Test metrics and error analysis |
-| 05_Amphan_Results | GeoTIFF outputs, graphs and cluster analysis |
-| 06_Documentation | Project documentation |
+Project members should ensure that they have access to the shared workspace before running the notebooks.
 
 ## 7. Reproduction Instructions
 
-1. Open `Member_A_Final.ipynb` in Google Colab.
+1. Open `notebooks/flood_mapping_reproduction.ipynb` in Google Colab.
 2. Connect Google Drive.
 3. Obtain the Sen1Floods11 dataset files using the dataset acquisition cells.
 4. Check the project directory and file paths.
 5. Install any missing dependencies from `requirements.txt`.
 6. Execute the notebook cells in their intended order.
-7. Train the model using the training cells.
-8. Evaluate the best checkpoint on the unseen test split.
-9. Run the Amphan inference and analysis sections.
+7. Follow the model training and evaluation workflow documented in the notebook.
+8. Run the Amphan inference and analysis sections.
 
 Do not assume that the notebook can be executed from top to bottom without checking its data paths and runtime requirements.
 
